@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Listing</title>
+</head>
+<body>
+    <form method="POST">
+        <div>
+            <label>Title:</label>
+            <input type="text" class="form-control" name="title" id="title"/>
+        </div>
+
+        <div>
+            <label>Price:</label>
+            <input type="number" class="form-check-input" name="price" value="price"/>
+        </div>
+
+        <div>
+            <label>Payments</label>
+            <input type="checkbox" class="form-check-input" name="payments" value="cod" />
+            <label>COD</label>
+
+            <input type="checkbox" class="form-check-input" name="payments" value="cheque"/>
+            <label>Cheque</label>
+
+            <input type="checkbox" class="form-check-input" name="payments" value="paynow" />
+            <label>Paynow</label>
+        </div>
+        <div>
+            <label>Type</label>
+            <input type="radio" class="form-check-input" name="type" value="electronic"/>
+            <label>Electronic</label>
+
+            <input type="radio" class="form-check-input" name="type" value="entertainment"/>
+            <label>Entertainment</label>
+
+            <input type="radio" class="form-check-input" name="type" value="clothings"/>
+            <label>Clothings</label>
+
+            <input type="radio" class="form-check-input" name="others" value="others"/>
+            <label>Others</label>
+        </div>
+        <input type="submit" value="Add new" class="btn btn-primary mt-3"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Listing</title>
+</head>
+<body>
+    <form method="POST">
+        <div>
+            <label>Title: </label>
+            <input type="text" 
+            class="form-control" 
+            name="title" 
+            id="title"
+            value="{{listing.title}}"/>
+        </div>
+        <div>
+            <label>Price</label>
+            <input type="number" 
+             class="form-control" 
+             name="price"
+             id="price"
+             value="{{listing.price}}"
+            />
+        </div>
+        <div>
+            <label>Payments</label>
+            <input type="checkbox" 
+            class="form-check-input"
+            name="payments" 
+            value="cod" 
+            {{#inArray listing.payments "cod"}}checked{{/inArray}}/>
+            <label>COD</label>
+
+            <input type="checkbox" 
+            class="form-check-input"
+            name="payments" 
+            value="cheque"
+            {{#inArray listing.payments "cheque"}}checked{{/inArray}}/>
+            <label>Cheque</label>
+
+            <input type="checkbox" 
+            class="form-check-input"
+            name="payments" 
+            value="paynow" 
+            {{#inArray listing.payments "paynow"}}checked{{/inArray}}
+            />
+            <label>Paynow</label>
+        </div>
+        <div>
+            <label>Type</label>
+            <input type="radio" 
+            class="form-check-input" 
+            name="type" 
+            value="electronic"
+            {{#eq listing.type "electronic"}}checked{{/eq}}/>
+            <label>Electronic</label>
+
+            <input type="radio" 
+            class="form-check-input" 
+            name="type" 
+            value="entertainment"
+            {{#eq listing.type "entertainment"}}checked{{/eq}}/>
+            <label>Entertainment</label>
+
+            <input type="radio" 
+            class="form-check-input" 
+            name="type" 
+            value="clothings"
+            {{#eq listing.type "clothings"}}checked{{/eq}}/>
+            <label>Clothings</label>
+
+            <input type="radio" 
+            class="form-check-input" 
+            name="others" 
+            value="others"
+            {{#eq listing.type "others"}}checked{{/eq}}/>
+            <label>Others</label>
+        </div>
+        <input type="submit"/>
+    </form>
+</body>
+</html>

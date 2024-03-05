@@ -1,0 +1,77 @@
+{{#extends "base"}}
+
+{{#block "content"}}
+<h1>Update Food</h1>
+<form method="POST">
+    <div>
+        <label>Food Name:</label>
+        <input type="text" 
+        class="form-control" 
+        name="foodName"
+        id="foodName"
+        value="{{record.foodName}}"/>
+    </div>
+    <div>
+        <label>Calories:</label>
+        <input type="text" 
+        class="form-control" 
+        name="calories"
+        id="foodName"
+        value="{{record.calories}}"
+        />
+    </div>
+    <div>
+        <label>Meal:</label>
+        <input type="radio" class="form-check-input" name="meal" value="breakfast" {{#eq record.meal "breakfast"}}checked{{/eq}}/>
+        <label>Breakfast</label>
+
+        <input type="radio" class="form-check-input" name="meal" value="lunch" {{#eq record.meal "lunch"}}checked{{/eq}}/>
+        <label>Lunch</label>
+
+        <input type="radio" class="form-check-input" name="meal" value="dinner" {{#eq record.meal "dinner"}}checked{{/eq}}/>
+        <label>Dinner</label>
+    </div>
+    <div>
+        <label>Tags</label>
+        <input type="checkbox" 
+            class="form-check-input" 
+            name="tags"
+            value="home-cooked"
+            {{#inArray record.tags "home-cooked"}}checked{{/inArray}}/>
+        <label>Homecooked</label>
+
+        <input type="checkbox" 
+            class="form-check-input" 
+            name="tags"
+            value="organic"
+            {{#inArray record.tags "organic"}}checked{{/inArray}}/>
+        <label>Organic</label>
+
+        <input type="checkbox" 
+            class="form-check-input" 
+            name="tags"
+            value="vegetarian"
+            {{#inArray record.tags "vegetarian"}}checked{{/inArray}}/>
+        <label>Vegetarian</label>
+
+        <input type="checkbox" 
+            class="form-check-input" 
+            name="tags"
+            value="gluten-free"
+            {{#inArray record.tags "gluten-free"}}checked{{/inArray}}/>
+        <label>Gluten Free</label>
+        
+        <input type="checkbox" 
+            class="form-check-input" 
+            name="tags"
+            value="less-oil"
+            {{#inArray record.tags "less-oil"}}checked{{/inArray}}/>
+        <label>Less Oil</label>
+    </div>
+    <div>
+        <input type="submit" class="btn btn-primary" value="Add Food"/>
+    </div>
+</form>
+
+{{/block}}
+{{/extends}}

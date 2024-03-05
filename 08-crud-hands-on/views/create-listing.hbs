@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <div>
+            <label>Title</label>
+            <input type="text" name="title"/>
+        </div>
+        <div>
+            <label>Price</label>
+            <input type="number" name="price"/>
+        </div>
+        <div>
+            <label>Payments</label>
+            <input type="checkbox" name="payments" value="cod" />
+            <label>COD</label>
+
+            <input type="checkbox" name="payments" value="cheque"/>
+            <label>Cheque</label>
+
+            <input type="checkbox" name="payments" value="paynow" />
+            <label>Paynow</label>
+        </div>
+        <div>
+            <label>Type</label>
+            <input type="radio" name="type" value="electronic"/>
+            <label>Electronic</label>
+
+            <input type="radio" name="type" value="entertainment"/>
+            <label>Entertainment</label>
+
+            <input type="radio" name="type" value="clothings"/>
+            <label>Clothings</label>
+
+            <input type="radio" name="others" value="others"/>
+            <label>Others</label>
+        </div>
+        <input type="submit"/>
+    </form>
+</body>
+</html>

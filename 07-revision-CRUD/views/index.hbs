@@ -23,6 +23,9 @@
             <td>{{this.calories}}</td>
             <td>{{this.meal}}</td>
             <td>{{this.tags}}</td>
+            <td>
+                <a href="/delete-food/{{this.id}}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
         </tr>
         {{/each}}
     </tbody>
